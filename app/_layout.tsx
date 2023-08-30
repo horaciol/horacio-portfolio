@@ -6,7 +6,7 @@ import {
 } from "@react-navigation/native";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
-import { useColorScheme } from "react-native";
+import { useColorScheme, View, StyleSheet } from "react-native";
 import {
   useFonts,
   Montserrat_100Thin,
@@ -42,6 +42,7 @@ import {
   OpenSans_700Bold_Italic,
   OpenSans_800ExtraBold_Italic,
 } from "@expo-google-fonts/open-sans";
+import Colors from "../constants/Colors";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -108,15 +109,37 @@ export default function RootLayout() {
   return <MainLayout />;
 }
 
+const Footer = () => <View style={styles.footer} />;
+
 function MainLayout() {
   const colorScheme = useColorScheme();
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(screens)" />
+      <Stack
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: Colors.contentSubTitleColor,
+          },
+          headerTitle: "Projects",
+          headerTintColor: Colors.contentTextColor,
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
+      >
+        <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="projects" />
       </Stack>
+      <Footer />
     </ThemeProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  footer: {
+    height: 25,
+    width: "100%",
+    backgroundColor: Colors.contentSubTitleColor,
+  },
+});

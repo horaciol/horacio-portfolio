@@ -1,9 +1,9 @@
 import { Pressable, StyleSheet } from "react-native";
 
-import { Text, View } from "../../components/Themed";
+import { Text, View } from "../components/Themed";
 import { Link } from "expo-router";
-import Colors from "../../constants/Colors";
-import { useLoadUrl } from "../hooks/useLoadUrl";
+import Colors from "../constants/Colors";
+import { useLoadUrl } from "./hooks/useLoadUrl";
 
 const RESUME_PDF_URL =
   "http://www.horaciolopez.com/assets/HoracioLopez_Resume.pdf";
