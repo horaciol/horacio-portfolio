@@ -1,27 +1,93 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
-import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider,
+} from "@react-navigation/native";
+import { SplashScreen, Stack } from "expo-router";
+import { useEffect } from "react";
+import { useColorScheme } from "react-native";
+import {
+  useFonts,
+  Montserrat_100Thin,
+  Montserrat_200ExtraLight,
+  Montserrat_300Light,
+  Montserrat_400Regular,
+  Montserrat_500Medium,
+  Montserrat_600SemiBold,
+  Montserrat_700Bold,
+  Montserrat_800ExtraBold,
+  Montserrat_900Black,
+  Montserrat_100Thin_Italic,
+  Montserrat_200ExtraLight_Italic,
+  Montserrat_300Light_Italic,
+  Montserrat_400Regular_Italic,
+  Montserrat_500Medium_Italic,
+  Montserrat_600SemiBold_Italic,
+  Montserrat_700Bold_Italic,
+  Montserrat_800ExtraBold_Italic,
+  Montserrat_900Black_Italic,
+} from "@expo-google-fonts/montserrat";
+import {
+  OpenSans_300Light,
+  OpenSans_400Regular,
+  OpenSans_500Medium,
+  OpenSans_600SemiBold,
+  OpenSans_700Bold,
+  OpenSans_800ExtraBold,
+  OpenSans_300Light_Italic,
+  OpenSans_400Regular_Italic,
+  OpenSans_500Medium_Italic,
+  OpenSans_600SemiBold_Italic,
+  OpenSans_700Bold_Italic,
+  OpenSans_800ExtraBold_Italic,
+} from "@expo-google-fonts/open-sans";
 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
-} from 'expo-router';
+} from "expo-router";
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: "(screens)",
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    ...FontAwesome.font,
+  let [fontsLoaded, error] = useFonts({
+    Montserrat_100Thin,
+    Montserrat_200ExtraLight,
+    Montserrat_300Light,
+    Montserrat_400Regular,
+    Montserrat_500Medium,
+    Montserrat_600SemiBold,
+    Montserrat_700Bold,
+    Montserrat_800ExtraBold,
+    Montserrat_900Black,
+    Montserrat_100Thin_Italic,
+    Montserrat_200ExtraLight_Italic,
+    Montserrat_300Light_Italic,
+    Montserrat_400Regular_Italic,
+    Montserrat_500Medium_Italic,
+    Montserrat_600SemiBold_Italic,
+    Montserrat_700Bold_Italic,
+    Montserrat_800ExtraBold_Italic,
+    Montserrat_900Black_Italic,
+    OpenSans_300Light,
+    OpenSans_400Regular,
+    OpenSans_500Medium,
+    OpenSans_600SemiBold,
+    OpenSans_700Bold,
+    OpenSans_800ExtraBold,
+    OpenSans_300Light_Italic,
+    OpenSans_400Regular_Italic,
+    OpenSans_500Medium_Italic,
+    OpenSans_600SemiBold_Italic,
+    OpenSans_700Bold_Italic,
+    OpenSans_800ExtraBold_Italic,
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
@@ -30,26 +96,26 @@ export default function RootLayout() {
   }, [error]);
 
   useEffect(() => {
-    if (loaded) {
+    if (fontsLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [fontsLoaded]);
 
-  if (!loaded) {
+  if (!fontsLoaded) {
     return null;
   }
 
-  return <RootLayoutNav />;
+  return <MainLayout />;
 }
 
-function RootLayoutNav() {
+function MainLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="(screens)" />
+        <Stack.Screen name="projects" />
       </Stack>
     </ThemeProvider>
   );
