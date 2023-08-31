@@ -97,6 +97,7 @@ const style = StyleSheet.create({
   },
   scrollContainer: {
     paddingTop: 15,
+    backgroundColor: Colors.contentBackgroundColor,
   },
   imageContainer: {
     width: "100%",
