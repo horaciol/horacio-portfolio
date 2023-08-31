@@ -10,6 +10,18 @@ export type ProjectListType = {
 };
 export const ProjectList: ProjectListType[] = [
   {
+    project_title: "Mobile App - Tyl by Natwest",
+    project_client: "Natwest - Pollinate International",
+    project_type: "React Native mobile app",
+    project_tasks:
+      "As a hands on mobile team lead my work involved architecture and strategy road maps to meet business objectives including white labelling and a UI overhaul, and mentoring other developers.",
+    project_description:
+      "A loyalty and rewards app for consumers of SMB merchants banking with NatWest. Shop with local and online merchants and recieve points each time you spend with them. The app is also home to hundreds of offers which can be used instore and online.",
+    project_image: "tyl.jpg",
+    project_url: "https://www.tylbynatwest.com/",
+    project_id: "p-51"
+  },
+  {
     project_title: "Mobile App - Digital Bank",
     project_client: "RBS/Natwest - Bó (bank)",
     project_type: "React Native mobile app",

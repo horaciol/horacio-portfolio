@@ -109,13 +109,14 @@ export default function RootLayout() {
   return <MainLayout />;
 }
 
-const Footer = () => <View style={styles.footer} />;
+const Border = () => <View style={styles.border} />;
 
 function MainLayout() {
   const colorScheme = useColorScheme();
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <Border />
       <Stack
         screenOptions={{
           headerStyle: {
@@ -131,14 +132,14 @@ function MainLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="projects" />
       </Stack>
-      <Footer />
+      <Border />
     </ThemeProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  footer: {
-    height: 25,
+  border: {
+    height: 15,
     width: "100%",
     backgroundColor: Colors.contentSubTitleColor,
   },

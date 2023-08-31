@@ -12,6 +12,7 @@ type ProjectDataType = {
 export const useProjectData = (): ProjectDataType => {
   const [hasLoaded, setHasLoaded] = useState<boolean>(false);
   const [assets, error] = useAssets([
+    require("../../assets/images/projects/tyl.jpg"),
     require("../../assets/images/projects/bo.jpg"),
     require("../../assets/images/projects/OW_ILAX.jpg"),
     require("../../assets/images/projects/OW_credit_studio.jpg"),

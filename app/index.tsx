@@ -4,9 +4,13 @@ import { Text, View } from "../components/Themed";
 import { Link } from "expo-router";
 import Colors from "../constants/Colors";
 import { useLoadUrl } from "./hooks/useLoadUrl";
+import { Icon } from "./utils/utils";
 
 const RESUME_PDF_URL =
   "http://www.horaciolopez.com/assets/HoracioLopez_Resume.pdf";
+const INSTAGRAM = "https://www.instagram.com/_horaciolopez/";
+const TWITTER = "https://twitter.com/_horaciolopez";
+const LINKEDIN = "https://uk.linkedin.com/in/lopezhoracio";
 
 export default function LandingScreen() {
   const { loadUrl } = useLoadUrl();
@@ -27,9 +31,27 @@ export default function LandingScreen() {
         <Link style={styles.links} href="/projects">
           PROJECTS
         </Link>
-        <Link style={styles.links} href="/projects">
-          SOCIAL
-        </Link>
+        <View style={styles.socialsContainer}>
+          <Pressable onPress={() => loadUrl(INSTAGRAM)}>
+            <Icon
+              name="instagram"
+              size={24}
+              color="white"
+              style={styles.icons}
+            />
+          </Pressable>
+          <Pressable onPress={() => loadUrl(LINKEDIN)}>
+            <Icon
+              name="linkedin-square"
+              size={24}
+              color="white"
+              style={styles.icons}
+            />
+          </Pressable>
+          <Pressable onPress={() => loadUrl(TWITTER)}>
+            <Icon name="twitter" size={24} color="white" style={styles.icons} />
+          </Pressable>
+        </View>
       </View>
     </View>
   );
@@ -65,5 +87,15 @@ const styles = StyleSheet.create({
   },
   linksContainer: {
     marginBottom: 40,
+  },
+  socialsContainer: {
+    flexDirection: "row",
+    alignContent: "space-between",
+
+    backgroundColor: Colors.contentBackgroundColor,
+  },
+  icons: {
+    paddingRight: 15,
+    backgroundColor: Colors.contentBackgroundColor,
   },
 });

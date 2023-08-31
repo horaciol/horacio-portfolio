@@ -41,7 +41,7 @@ export default function ProjectsScreen() {
   return (
     <>
       {isWeb ? (
-        <ScrollView>
+        <ScrollView style={style.scrollContainer}>
           <div className={styles.itemContainer}>
             {ProjectList.map((item) => renderItems({ item: item }))}
           </div>
@@ -94,6 +94,9 @@ const style = StyleSheet.create({
     overflow: "hidden",
     borderWidth: 1,
     borderColor: "white",
+  },
+  scrollContainer: {
+    paddingTop: 15,
   },
   imageContainer: {
     width: "100%",
