@@ -2,7 +2,6 @@ import { ImageSourcePropType, Linking } from "react-native";
 import { ProjectList } from "../data/projectsData";
 import { Asset, useAssets } from "expo-asset";
 import { useEffect, useState } from "react";
-import { isWeb } from "../utils/utils";
 
 type ProjectDataType = {
   hasLoaded: boolean;
@@ -12,6 +11,7 @@ type ProjectDataType = {
 export const useProjectData = (): ProjectDataType => {
   const [hasLoaded, setHasLoaded] = useState<boolean>(false);
   const [assets, error] = useAssets([
+    require("../../assets/images/projects/oap.jpg"),
     require("../../assets/images/projects/tyl.jpg"),
     require("../../assets/images/projects/bo.jpg"),
     require("../../assets/images/projects/OW_ILAX.jpg"),

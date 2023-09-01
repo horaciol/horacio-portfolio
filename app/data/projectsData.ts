@@ -10,6 +10,18 @@ export type ProjectListType = {
 };
 export const ProjectList: ProjectListType[] = [
   {
+    project_title: "Universal App - Order and Pay",
+    project_client: "Pollinate International",
+    project_type: "Expo/React Native mobile/web app",
+    project_tasks:
+      "I led the proof of concept stage for the universal app approach using Expo/React Native Mobile/Web - Introducting a new approach to state management and api consumption (zustand and Tanstack) to produce web/mobile tools through one codebase",
+    project_description:
+      "A suite of digital tools for banks to offer their SMBs to streamline their food and beverage services",
+    project_image: "oap.jpg",
+    project_url: "#",
+    project_id: "p-52"
+  },
+  {
     project_title: "Mobile App - Tyl by Natwest",
     project_client: "Natwest - Pollinate International",
     project_type: "React Native mobile app",
