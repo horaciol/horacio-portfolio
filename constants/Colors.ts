@@ -2,7 +2,7 @@ const tintColorLight = "#2f95dc";
 const tintColorDark = "#fff";
 const contentBackgroundColor = "#373b44";
 const contentTextColor = "white";
-const contentSubTitleColor = "#FF5500";
+const contentSubTitleColor = "#ff5500";
 
 export default {
   light: {

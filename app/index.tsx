@@ -24,9 +24,9 @@ export default function LandingScreen() {
         </Text>
       </View>
       <View style={styles.linksContainer}>
-        <Pressable onPress={() => loadUrl(RESUME_PDF_URL)}>
-          <Text style={styles.links}>RESUME</Text>
-        </Pressable>
+        <Link style={styles.links} href="/resume">
+          RESUME
+        </Link>
 
         <Link style={styles.links} href="/projects">
           PROJECTS

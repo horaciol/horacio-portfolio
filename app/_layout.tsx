@@ -1,4 +1,5 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+//import FontAwesome from "@expo/vector-icons/FontAwesome";
+
 import {
   DarkTheme,
   DefaultTheme,
@@ -131,6 +132,8 @@ function MainLayout() {
       >
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="projects" />
+        <Stack.Screen name="resume" options={{ headerTitle: "Resume" }} />
+        <Stack.Screen name="quotes" />
       </Stack>
       <Border />
     </ThemeProvider>
