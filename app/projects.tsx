@@ -1,25 +1,18 @@
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  Dimensions,
-  ScrollView,
-} from "react-native";
+import { FlashList } from "@shopify/flash-list"
+import { StyleSheet, View, Text, Image, ScrollView } from "react-native"
 
-import { useProjectData } from "./hooks/useProjectsData";
-import ProjectList, { ProjectListType } from "./data/projectsData";
-import { FlashList } from "@shopify/flash-list";
-import Colors from "../constants/Colors";
-import { isWeb } from "./utils/utils";
-import styles from "./styles/projects.module.css";
+import ProjectList, { ProjectListType } from "./data/projectsData"
+import { useProjectData } from "./hooks/useProjectsData"
+import styles from "./styles/projects.module.css"
+import { isWeb } from "./utils/utils"
+import Colors from "../constants/Colors"
 
 const seperator = () => {
-  return <View style={style.separator} />;
-};
+  return <View style={style.separator} />
+}
 
 export default function ProjectsScreen() {
-  const { getImage } = useProjectData();
+  const { getImage } = useProjectData()
 
   const renderItems = ({ item }: { item: ProjectListType }) => {
     return (
@@ -35,15 +28,15 @@ export default function ProjectsScreen() {
         <Text style={style.subHeading}>Tasks:</Text>
         <Text style={style.content}>{item.project_tasks}</Text>
       </View>
-    );
-  };
+    )
+  }
 
   return (
     <>
       {isWeb ? (
         <ScrollView style={style.scrollContainer}>
           <div className={styles.itemContainer}>
-            {ProjectList.map((item) => renderItems({ item: item }))}
+            {ProjectList.map(item => renderItems({ item }))}
           </div>
         </ScrollView>
       ) : (
@@ -58,7 +51,7 @@ export default function ProjectsScreen() {
         </View>
       )}
     </>
-  );
+  )
 }
 
 const style = StyleSheet.create({
@@ -112,4 +105,4 @@ const style = StyleSheet.create({
     width: "100%",
     backgroundColor: Colors.contentTextColor,
   },
-});
+})

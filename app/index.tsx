@@ -1,19 +1,17 @@
-import { Pressable, StyleSheet } from "react-native";
+import { Link } from "expo-router"
+import { Pressable, StyleSheet } from "react-native"
 
-import { Text, View } from "../components/Themed";
-import { Link } from "expo-router";
-import Colors from "../constants/Colors";
-import { useLoadUrl } from "./hooks/useLoadUrl";
-import { Icon } from "./utils/utils";
+import { useLoadUrl } from "./hooks/useLoadUrl"
+import { Icon } from "./utils/utils"
+import { Text, View } from "../components/Themed"
+import Colors from "../constants/Colors"
 
-const RESUME_PDF_URL =
-  "http://www.horaciolopez.com/assets/HoracioLopez_Resume.pdf";
-const INSTAGRAM = "https://www.instagram.com/_horaciolopez/";
-const TWITTER = "https://twitter.com/_horaciolopez";
-const LINKEDIN = "https://uk.linkedin.com/in/lopezhoracio";
+const INSTAGRAM = "https://www.instagram.com/_horaciolopez/"
+const TWITTER = "https://twitter.com/_horaciolopez"
+const LINKEDIN = "https://uk.linkedin.com/in/lopezhoracio"
 
 export default function LandingScreen() {
-  const { loadUrl } = useLoadUrl();
+  const { loadUrl } = useLoadUrl()
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
@@ -54,7 +52,7 @@ export default function LandingScreen() {
         </View>
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -98,4 +96,4 @@ const styles = StyleSheet.create({
     paddingRight: 15,
     backgroundColor: Colors.contentBackgroundColor,
   },
-});
+})

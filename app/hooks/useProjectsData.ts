@@ -1,16 +1,16 @@
-import { ImageSourcePropType, Linking } from "react-native";
-import { ProjectList } from "../data/projectsData";
-import { Asset, useAssets } from "expo-asset";
-import { useEffect, useState } from "react";
+import { Asset, useAssets } from "expo-asset"
+import { useEffect, useState } from "react"
+
+import { ProjectList } from "../data/projectsData"
 
 type ProjectDataType = {
-  hasLoaded: boolean;
-  getImage: (name: string) => Asset | undefined;
-};
+  hasLoaded: boolean
+  getImage: (name: string) => Asset | undefined
+}
 
 export const useProjectData = (): ProjectDataType => {
-  const [hasLoaded, setHasLoaded] = useState<boolean>(false);
-  const [assets, error] = useAssets([
+  const [hasLoaded, setHasLoaded] = useState<boolean>(false)
+  const [assets] = useAssets([
     require("../../assets/images/projects/oap.jpg"),
     require("../../assets/images/projects/tyl.jpg"),
     require("../../assets/images/projects/bo.jpg"),
@@ -54,26 +54,24 @@ export const useProjectData = (): ProjectDataType => {
     require("../../assets/images/projects/lk1.jpg"),
     require("../../assets/images/projects/olly1.jpg"),
     require("../../assets/images/projects/olly_mob1.jpg"),
-    require("../../assets/images/projects/mm3.jpg")
-  ]);
+    require("../../assets/images/projects/mm3.jpg"),
+  ])
 
-  useEffect(
-    () => {
-      if (assets) {
-        setHasLoaded(true);
-      }
-    },
-    [assets]
-  );
+  useEffect(() => {
+    if (assets) {
+      setHasLoaded(true)
+    }
+  }, [assets])
 
   const getImage = (name: string): Asset | undefined => {
     if (hasLoaded && assets) {
-      const index = ProjectList.findIndex(project => project.project_image === name);
+      const index = ProjectList.findIndex(
+        project => project.project_image === name
+      )
 
-      return assets[index];
+      return assets[index]
     }
-    return;
-  };
+  }
 
-  return { getImage, hasLoaded };
-};
+  return { getImage, hasLoaded }
+}

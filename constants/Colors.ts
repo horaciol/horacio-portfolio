@@ -3,6 +3,10 @@ const tintColorDark = "#fff";
 const contentBackgroundColor = "#373b44";
 const contentTextColor = "white";
 const contentSubTitleColor = "#ff5500";
+const resumeBackroundPurple = "#262265"
+const resumeBackgroundAqua = "#09cfbb"
+const resumeBackgroundViolet = "#4f00f2"
+const resumeBackgroundPink = "#fb1e5c"
 
 export default {
   light: {
@@ -21,5 +25,9 @@ export default {
   },
   contentBackgroundColor,
   contentTextColor,
-  contentSubTitleColor
+  contentSubTitleColor,
+  resumeBackroundPurple,
+  resumeBackgroundAqua,
+  resumeBackgroundViolet,
+  resumeBackgroundPink
 };
