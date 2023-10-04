@@ -50,12 +50,6 @@ const styles = StyleSheet.create({
     color: "black",
     paddingBottom: 5,
   },
-  //   course: {
-  //     fontSize: 15,
-  //     fontFamily: "Montserrat_500Medium",
-  //     color: "grey",
-  //     paddingBottom: 5,
-  //   },
   course: {
     fontSize: 13,
     fontFamily: "OpenSans_400Regular",
@@ -63,11 +57,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   leftContainer: {
-    alignSelf: "center",
-
-    alignContent: "center",
     alignItems: "center",
-    justifyContent: "center",
   },
   rightContainer: {
     paddingHorizontal: 10,

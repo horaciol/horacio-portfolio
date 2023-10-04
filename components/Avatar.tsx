@@ -8,7 +8,7 @@ type Props = {
   style?: ImageStyle
 }
 
-const rw = (size: number) => size * 0.75
+const rw = (size: number) => size * 0.8
 
 export default function Avatar({
   source,
@@ -30,6 +30,9 @@ const styles = StyleSheet.create({
       width: rw(size),
       height: rw(size),
       borderRadius: size,
+      borderStyle: "solid",
+      borderColor: "#aaaaaa",
+      borderWidth: 5,
       resizeMode,
     }) as any,
 })

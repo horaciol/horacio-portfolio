@@ -40,7 +40,7 @@ import {
 } from "@react-navigation/native"
 import { SplashScreen, Stack } from "expo-router"
 import { useEffect } from "react"
-import { useColorScheme, View, StyleSheet } from "react-native"
+import { useColorScheme } from "react-native"
 
 import Colors from "../constants/Colors"
 
@@ -109,42 +109,30 @@ export default function RootLayout() {
   return <MainLayout />
 }
 
-const Border = () => <View style={styles.border} />
-
 function MainLayout() {
   const colorScheme = useColorScheme()
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Border />
       <Stack
         screenOptions={{
           headerStyle: {
             backgroundColor: Colors.contentSubTitleColor,
           },
-          headerTitle: "Projects",
+          headerTitle: "",
           headerTintColor: Colors.contentTextColor,
           headerTitleStyle: {
             fontWeight: "bold",
           },
         }}
       >
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="projects" />
-        <Stack.Screen name="resume" options={{ headerTitle: "Resume" }} />
-        <Stack.Screen name="work" options={{ headerTitle: "work" }} />
-        <Stack.Screen name="education" options={{ headerTitle: "education" }} />
-        <Stack.Screen name="skills" options={{ headerTitle: "skills" }} />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="projects" options={{ headerTitle: "projects" }} />
+        <Stack.Screen name="resume" options={{ headerTitle: "resume" }} />
+        <Stack.Screen name="work" />
+        <Stack.Screen name="education" />
+        <Stack.Screen name="skills" />
       </Stack>
-      <Border />
     </ThemeProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  border: {
-    height: 15,
-    width: "100%",
-    backgroundColor: Colors.contentSubTitleColor,
-  },
-})

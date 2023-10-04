@@ -1,17 +1,28 @@
 import { router } from "expo-router"
-import { StyleSheet, View, Text, Pressable } from "react-native"
+import { StyleSheet, View, Text, Pressable, Image } from "react-native"
 
 import { Icon } from "./utils/utils"
 import Colors from "../constants/Colors"
 import Avatar from "../components/Avatar"
+import { useAssets } from "expo-asset"
+import { useEffect } from "react"
+import { useLoadUrl } from "./hooks/useLoadUrl"
 
 const Separator = () => <View style={styles.separator} />
-const image = "https://i.pravatar.cc/300"
+const RESUME_PDF_URL =
+  "http://www.horaciolopez.com/assets/HoracioLopez_Resume.pdf"
+
 export default function ResumeScreen() {
+  const [assets] = useAssets([require("../assets/images/profile.jpg")])
+  const { loadUrl } = useLoadUrl()
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Avatar resizeMode="stretch" size={150} source={{ uri: image }} />
+        <Avatar
+          resizeMode="stretch"
+          size={150}
+          source={{ uri: assets ? assets[0].localUri : null }}
+        />
 
         <Text style={styles.title}>Horacio Lopez</Text>
         <Text style={styles.content}>Front End Software Engineer</Text>
@@ -49,6 +60,13 @@ export default function ResumeScreen() {
           </View>
         </Pressable>
         <Separator />
+        <Pressable onPress={() => loadUrl(RESUME_PDF_URL)}>
+          <View style={styles.pressable}>
+            <Icon name="print" size={24} color="white" style={styles.icons} />
+            <Text style={styles.content}>PRINT</Text>
+          </View>
+        </Pressable>
+        <Separator />
       </View>
     </View>
   )
@@ -71,21 +89,21 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontFamily: "OpenSans_400Regular",
     color: "white",
-
+    top: 2,
     paddingBottom: 0,
   },
   icons: {
     paddingRight: 15,
-    backgroundColor: Colors.contentBackgroundColor,
+    backgroundColor: "#5a5c69",
   },
   pressable: {
     flexDirection: "row",
     padding: 15,
-    backgroundColor: Colors.contentBackgroundColor,
+    backgroundColor: "#5a5c69",
   },
   separator: {
-    height: 0.5,
-    backgroundColor: "black",
+    height: 1,
+    backgroundColor: Colors.contentBackgroundColor,
   },
   header: {
     alignContent: "center",

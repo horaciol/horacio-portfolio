@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet, Text } from "react-native"
 import { ScrollView } from "react-native-gesture-handler"
 import Animated, { FadeInUp } from "react-native-reanimated"
 
@@ -9,6 +9,7 @@ let colourIndex = -1
 export default function WorkScreen() {
   return (
     <ScrollView style={styles.container}>
+      <Text style={styles.title}>Experience</Text>
       {ExperienceList.map((item, index) => {
         colourIndex >= 3 ? (colourIndex = 0) : colourIndex++
         return (
@@ -29,5 +30,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 0,
     backgroundColor: "white",
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    fontFamily: "Montserrat_500Medium",
+    color: "black",
+    paddingHorizontal: 15,
+    paddingTop: 15,
   },
 })

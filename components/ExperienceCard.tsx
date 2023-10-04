@@ -30,7 +30,7 @@ export default function ExperienceCard({
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
-        <Icon name="briefcase" size={24} color="red" style={styles.icons} />
+        <Icon name="briefcase" size={20} color="red" />
         <View style={styles.border}></View>
       </View>
       <View style={styles.rightContainer}>
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     flex: 1,
   },
+
   company: {
     fontSize: 18,
     fontWeight: "bold",
@@ -87,11 +88,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   leftContainer: {
-    alignSelf: "center",
-
-    alignContent: "center",
     alignItems: "center",
-    justifyContent: "center",
   },
   rightContainer: {
     paddingHorizontal: 10,
@@ -101,9 +98,6 @@ const styles = StyleSheet.create({
     fontFamily: "OpenSans_400Regular",
     color: "grey",
     paddingBottom: 5,
-  },
-  icons: {
-    //paddingRight: 15,
   },
   row: {
     flexDirection: "row",

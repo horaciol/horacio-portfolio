@@ -30,3 +30,8 @@ pollinaterewards.app
 .netlify
 
 .idea
+.yarn/*
+horacioportfolio.app
+*.apk
+*.aab
+*.tar.gz

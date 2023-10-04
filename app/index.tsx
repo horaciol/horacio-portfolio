@@ -60,6 +60,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.contentBackgroundColor,
     paddingHorizontal: 25,
+    borderTopColor: Colors.contentSubTitleColor,
+    borderTopWidth: 0,
+    borderBottomWidth: 20,
+    borderBottomColor: Colors.contentSubTitleColor,
   },
   contentContainer: {
     flex: 1,
