@@ -1,12 +1,11 @@
-import { router } from "expo-router"
-import { StyleSheet, View, Text, Pressable, Image } from "react-native"
-
-import { Icon } from "./utils/utils"
-import Colors from "../constants/Colors"
-import Avatar from "../components/Avatar"
 import { useAssets } from "expo-asset"
-import { useEffect } from "react"
+import { router } from "expo-router"
+import { StyleSheet, View, Text, Pressable } from "react-native"
+
 import { useLoadUrl } from "./hooks/useLoadUrl"
+import { Icon } from "./utils/utils"
+import Avatar from "../components/Avatar"
+import Colors from "../constants/Colors"
 
 const Separator = () => <View style={styles.separator} />
 const RESUME_PDF_URL =

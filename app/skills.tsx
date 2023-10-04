@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from "react-native"
 import { ScrollView } from "react-native-gesture-handler"
-import { SkillsList } from "./data/resumeData"
 import Animated, { FadeInUp } from "react-native-reanimated"
+
+import { SkillsList } from "./data/resumeData"
 import SkillsCard from "../components/skillsCard"
 import Colors from "../constants/Colors"
 
@@ -37,7 +38,6 @@ export default function SkillsScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-
     backgroundColor: "white",
   },
   title: {
