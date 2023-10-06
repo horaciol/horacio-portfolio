@@ -91,7 +91,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   rightContainer: {
-    paddingHorizontal: 10,
+    paddingRight: 15,
+    paddingLeft: 10,
+    flex: 1,
   },
   period: {
     fontSize: 12,

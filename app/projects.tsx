@@ -89,7 +89,7 @@ const style = StyleSheet.create({
     borderColor: "white",
   },
   scrollContainer: {
-    paddingTop: 15,
+    padding: 15,
     backgroundColor: Colors.contentBackgroundColor,
   },
   imageContainer: {

@@ -4,7 +4,6 @@ import Animated, { FadeInUp } from "react-native-reanimated"
 
 import { SkillsList } from "./data/resumeData"
 import SkillsCard from "../components/skillsCard"
-import Colors from "../constants/Colors"
 
 let colourIndex = -1
 export default function SkillsScreen() {
@@ -38,7 +37,7 @@ export default function SkillsScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: "white",
+    backgroundColor: "#FFFFFF",
   },
   title: {
     fontSize: 18,
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
   },
   wrapper: {
-    backgroundColor: "white",
+    backgroundColor: "#FFFFFF",
     flex: 1,
   },
 })

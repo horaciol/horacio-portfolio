@@ -13,12 +13,7 @@ export default function EducationCard({
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
-        <Icon
-          name="graduation-cap"
-          size={24}
-          color="red"
-          style={styles.icons}
-        />
+        <Icon name="graduation-cap" size={24} color="red" />
         <View style={styles.border}></View>
       </View>
       <View style={styles.rightContainer}>
@@ -60,16 +55,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   rightContainer: {
-    paddingHorizontal: 10,
+    paddingRight: 15,
+    paddingLeft: 10,
+    flex: 1,
   },
   period: {
     fontSize: 12,
     fontFamily: "OpenSans_400Regular",
     color: "grey",
     paddingBottom: 5,
-  },
-  icons: {
-    //paddingRight: 15,
   },
   row: {
     flexDirection: "row",

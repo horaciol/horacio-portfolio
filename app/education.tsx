@@ -7,8 +7,8 @@ import EducationCard from "../components/EducationCard"
 
 export default function EducationScreen() {
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.title}>Education</Text>
+    <ScrollView style={locaStyles.container}>
+      <Text style={locaStyles.title}>Education</Text>
       {EdcuationList.map((item, index) => {
         return (
           <Animated.View
@@ -23,7 +23,7 @@ export default function EducationScreen() {
   )
 }
 
-const styles = StyleSheet.create({
+const locaStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 0,
