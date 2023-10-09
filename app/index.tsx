@@ -18,7 +18,7 @@ export default function LandingScreen() {
         <Text style={styles.title}>Horacio Lopez</Text>
         <Text style={styles.description}>
           I'm a Senior Front End Software Engineer, a team player and lead. A
-          curious mind with over 18 years experience in IT that likes to work
+          curious mind with over 18 years experience in IT who likes to work
           with other creative brains.
         </Text>
         <Text style={styles.description}>
