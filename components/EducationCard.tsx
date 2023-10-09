@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text } from "react-native"
 
-import { EducationListType, contractType } from "../app/data/resumeData"
+import { EducationListType } from "../app/data/resumeData"
 import { Icon } from "../app/utils/utils"
 
 type EducationCardProps = EducationListType

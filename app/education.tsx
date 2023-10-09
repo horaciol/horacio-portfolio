@@ -1,19 +1,21 @@
 import { StyleSheet, Text } from "react-native"
 import { ScrollView } from "react-native-gesture-handler"
-import Animated, { FadeInUp } from "react-native-reanimated"
+import Animated from "react-native-reanimated"
 
 import { EdcuationList } from "./data/resumeData"
+import { useFadeInUpAnimation } from "./hooks/useFadeInUpAnimation"
 import EducationCard from "../components/EducationCard"
 
 export default function EducationScreen() {
   return (
-    <ScrollView style={locaStyles.container}>
-      <Text style={locaStyles.title}>Education</Text>
+    <ScrollView style={styles.container}>
+      <Text style={styles.title}>Education</Text>
       {EdcuationList.map((item, index) => {
+        const { animationStyles } = useFadeInUpAnimation({ index })
         return (
           <Animated.View
             key={index}
-            entering={FadeInUp.delay(300 * index + 300).duration(600)}
+            style={[styles.startPosition, animationStyles]}
           >
             <EducationCard {...item} />
           </Animated.View>
@@ -23,7 +25,7 @@ export default function EducationScreen() {
   )
 }
 
-const locaStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 0,
@@ -36,5 +38,9 @@ const locaStyles = StyleSheet.create({
     color: "black",
     paddingHorizontal: 15,
     paddingTop: 15,
+  },
+  startPosition: {
+    opacity: 0,
+    top: 40,
   },
 })

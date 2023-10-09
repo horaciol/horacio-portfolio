@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from "react-native"
 import { ScrollView } from "react-native-gesture-handler"
-import Animated, { FadeInUp } from "react-native-reanimated"
+import Animated from "react-native-reanimated"
 
 import { SkillsList } from "./data/resumeData"
+import { useFadeInUpAnimation } from "./hooks/useFadeInUpAnimation"
 import SkillsCard from "../components/skillsCard"
 
 let colourIndex = -1
@@ -20,10 +21,15 @@ export default function SkillsScreen() {
       >
         {SkillsList.map((item, index) => {
           colourIndex >= 3 ? (colourIndex = 0) : colourIndex++
+          const { animationStyles } = useFadeInUpAnimation({
+            index,
+            duration: 200,
+            delay: 40,
+          })
           return (
             <Animated.View
               key={index}
-              entering={FadeInUp.delay(100 * index + 100).duration(300)}
+              style={[styles.startPosition, animationStyles]}
             >
               <SkillsCard skill={item} index={colourIndex} />
             </Animated.View>
@@ -46,6 +52,10 @@ const styles = StyleSheet.create({
     color: "black",
     paddingHorizontal: 15,
     paddingTop: 15,
+  },
+  startPosition: {
+    opacity: 0,
+    top: 100,
   },
   wrapper: {
     backgroundColor: "#FFFFFF",

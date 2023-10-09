@@ -16,7 +16,7 @@ export const ProjectList: ProjectListType[] = [
     project_tasks:
       "I led the proof of concept stage for the universal app approach using Expo/React Native Mobile/Web - Introducting a new approach to state management and api consumption (zustand and Tanstack) to produce web/mobile tools through one codebase",
     project_description:
-      "A suite of digital tools for banks to offer their SMBs to streamline their food and beverage services",
+      "A suite of digital tools for banks to offer their SMEs to streamline their food and beverage services",
     project_image: "oap.jpg",
     project_url: "#",
     project_id: "p-52",

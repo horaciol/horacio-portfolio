@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, View, Text } from "react-native"
+import { StyleSheet, View, Text } from "react-native"
 
 import Colors from "../constants/Colors"
 import { contractType } from "../app/data/resumeData"
@@ -10,7 +10,6 @@ type ExperienceCardProps = {
   period: string
   description: string
   contracts?: contractType[]
-  index?: number
 }
 const backgroundColors = [
   Colors.resumeBackroundPurple,
@@ -25,7 +24,6 @@ export default function ExperienceCard({
   period,
   description,
   contracts,
-  index = 0,
 }: ExperienceCardProps) {
   return (
     <View style={styles.container}>

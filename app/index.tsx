@@ -17,9 +17,14 @@ export default function LandingScreen() {
       <View style={styles.contentContainer}>
         <Text style={styles.title}>Horacio Lopez</Text>
         <Text style={styles.description}>
-          I'm a front end Software Engineer, a team player, an Aussie,
-          bilingual, a fresh mind that likes to work with other creative brains.
+          I'm a Senior Front End Software Engineer, a team player and lead. A
+          curious mind with over 18 years experience in IT that likes to work
+          with other creative brains.
         </Text>
+        <Text style={styles.description}>
+          Latino | Aussie | British | Bilingual | Dad of 2
+        </Text>
+        <Text style={styles.description}></Text>
       </View>
       <View style={styles.linksContainer}>
         <Link style={styles.links} href="/resume">
@@ -81,6 +86,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: "OpenSans_400Regular",
     color: Colors.contentTextColor,
+    marginBottom: 10,
   },
   links: {
     paddingBottom: 15,
