@@ -10,6 +10,18 @@ export type ProjectListType = {
 }
 export const ProjectList: ProjectListType[] = [
   {
+    project_title: "Aviva - Simple Wealth",
+    project_client: "Aviva PLC",
+    project_type: "Expo/React Native mobile app",
+    project_tasks:
+      "Technical leadership, relate to developers of all levels, help formulate solutions to problems and be a source of hands-on support to upskill the team.  Own larger pieces of work, contribute to the continuous integration of code by raising and reviewing pull requests.  Enforce test driven development.",
+    project_description:
+      "The Simple Wealth app offers personalised investment advice and enables clients the opportunity to talk with an Aviva Money Coach.",
+    project_image: "aviva.jpg",
+    project_url: "#",
+    project_id: "p-53",
+  },
+  {
     project_title: "Universal App - Order and Pay",
     project_client: "Pollinate International",
     project_type: "Expo/React Native mobile/web app",

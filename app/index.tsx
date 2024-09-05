@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
   socialsContainer: {
     flexDirection: "row",
     alignContent: "space-between",
-
     backgroundColor: Colors.contentBackgroundColor,
   },
   icons: {
