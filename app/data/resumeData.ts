@@ -17,9 +17,16 @@ export type EducationListType = {
 }
 export const ExperienceList: ExperienceListType[] = [
   {
+    company: "Wipro / Aviva PLC",
+    position: "Software Engineer Mobile Lead (React Native)",
+    period: "November 2023 - present, London, UK",
+    description:
+      "Technical leadership, source of hands-on development support to upskill the team and deliver.  Own larger pieces of work, contribute to the continuous integration and enforce test driven development",
+  },
+  {
     company: "Pollinate International",
     position: "Software Engineer Mobile Lead (React Native)",
-    period: "August 2022 - present, London, UK",
+    period: "August 2022 - October 2023, London, UK",
     description:
       "Tyl by Natwest Mobile App - React Native team lead development architecture, roadmap and management",
   },

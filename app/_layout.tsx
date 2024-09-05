@@ -120,6 +120,7 @@ function MainLayout() {
             backgroundColor: Colors.contentSubTitleColor,
           },
           headerTitle: "",
+          headerTintColor: Colors.contentTextColor,
           headerTitleStyle: {
             fontWeight: "bold",
           },
