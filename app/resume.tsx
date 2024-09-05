@@ -9,7 +9,7 @@ import Colors from "../constants/Colors"
 
 const Separator = () => <View style={styles.separator} />
 const RESUME_PDF_URL =
-  "http://www.horaciolopez.com/assets/HoracioLopez_Resume.pdf"
+  "http://www.horaciolopez.com/assets/horacio-lopez-cv-2024.pdf"
 
 export default function ResumeScreen() {
   const [assets] = useAssets([require("../assets/images/profile.jpg")])
