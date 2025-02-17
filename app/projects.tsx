@@ -38,7 +38,7 @@ export default function ProjectsScreen() {
         {item.google_play_url && (
           <>
             <Link style={style.link} href={item.google_play_url}>
-              Get it on Google Play here
+              Get it on Google Play here (releasing soon)
             </Link>
           </>
         )}
@@ -124,5 +124,6 @@ const style = StyleSheet.create({
     fontFamily: "Montserrat_600SemiBold",
     textDecorationLine: "underline",
     color: "white",
+    paddingVertical: 5,
   },
 })

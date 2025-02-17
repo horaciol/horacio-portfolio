@@ -24,6 +24,7 @@ export const ProjectList: ProjectListType[] = [
     project_id: "p-54",
     app_store_url:
       "https://apps.apple.com/us/app/bindl-travel-tracker/id6741480988",
+    google_play_url: "#",
   },
   {
     project_title: "Aviva - Simple Wealth",
