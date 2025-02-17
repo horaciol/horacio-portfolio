@@ -18,7 +18,7 @@ export const ProjectList: ProjectListType[] = [
     project_tasks:
       "Complete ownership of the app from conception to deployment, using Expo/React Native.",
     project_description:
-      "Bindl is a travel tracker app that allows users to track their travel visits, and to share their statistics.",
+      "Bindl is an application that enables users to track their travel history. It allows you to monitor the number of countries visited, along with the dates and duration of your stays",
     project_image: "bindl.jpg",
     project_url: "#",
     project_id: "p-54",
