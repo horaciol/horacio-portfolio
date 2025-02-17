@@ -7,8 +7,24 @@ export type ProjectListType = {
   project_image: string
   project_url: string
   project_id?: string
+  app_store_url?: string
+  google_play_url?: string
 }
 export const ProjectList: ProjectListType[] = [
+  {
+    project_title: "Bindl - Travel Tracker",
+    project_client: "Personal",
+    project_type: "Expo/React Native mobile app",
+    project_tasks:
+      "Complete ownership of the app from conception to deployment, using Expo/React Native.",
+    project_description:
+      "Bindl is a travel tracker app that allows users to track their travel visits, and to share their statistics.",
+    project_image: "bindl.jpg",
+    project_url: "#",
+    project_id: "p-54",
+    app_store_url:
+      "https://apps.apple.com/us/app/bindl-travel-tracker/id6741480988",
+  },
   {
     project_title: "Aviva - Simple Wealth",
     project_client: "Aviva PLC",

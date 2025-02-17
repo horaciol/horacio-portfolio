@@ -1,11 +1,12 @@
 import { FlashList } from "@shopify/flash-list"
-import { StyleSheet, View, Text, Image, ScrollView } from "react-native"
+import { Link } from "expo-router"
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
 
+import Colors from "../constants/Colors"
 import ProjectList, { ProjectListType } from "./data/projectsData"
 import { useProjectData } from "./hooks/useProjectsData"
 import styles from "./styles/projects.module.css"
 import { isWeb } from "./utils/utils"
-import Colors from "../constants/Colors"
 
 const seperator = () => {
   return <View style={style.separator} />
@@ -27,6 +28,20 @@ export default function ProjectsScreen() {
         <Text style={style.content}>{item.project_description}</Text>
         <Text style={style.subHeading}>Tasks:</Text>
         <Text style={style.content}>{item.project_tasks}</Text>
+        {item.app_store_url && (
+          <>
+            <Link style={style.link} href={item.app_store_url}>
+              Get it on the App Store here
+            </Link>
+          </>
+        )}
+        {item.google_play_url && (
+          <>
+            <Link style={style.link} href={item.google_play_url}>
+              Get it on Google Play here
+            </Link>
+          </>
+        )}
       </View>
     )
   }
@@ -104,5 +119,10 @@ const style = StyleSheet.create({
     height: 1,
     width: "100%",
     backgroundColor: Colors.contentTextColor,
+  },
+  link: {
+    fontFamily: "Montserrat_600SemiBold",
+    textDecorationLine: "underline",
+    color: "white",
   },
 })
