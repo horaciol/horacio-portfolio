@@ -38,7 +38,7 @@ export default function ProjectsScreen() {
         {item.google_play_url && (
           <>
             <Link style={style.link} href={item.google_play_url}>
-              Get it on Google Play here (releasing soon)
+              Get it on Google Play here
             </Link>
           </>
         )}
